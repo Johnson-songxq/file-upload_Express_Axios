@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(fileUpload());
 
-//error 中间件，比一般的多个err
+//error middleware, first argument is err
 app.use((err, req, res, next) => {
   res.status(500).send("Server Error");
 });
